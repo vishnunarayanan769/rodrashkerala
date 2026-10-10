@@ -14,11 +14,28 @@ Road Rash Kerala is an action-packed web-based racing game inspired by classic v
 
 ## Tech Stack
 
-- **Framework**: [React 19](https://react.dev/)
-- **Bundler**: [Vite](https://vitejs.dev/)
-- **Styling**: [Tailwind CSS v4](https://tailwindcss.com/)
-- **Language**: TypeScript
-- **Networking**: [PeerJS](https://peerjs.com/) for P2P multiplayer
+- **Framework**: [React 19](https://react.dev/) for building the user interface.
+- **Bundler**: [Vite](https://vitejs.dev/) for fast development and building.
+- **Build Plugin**: `vite-plugin-singlefile` to bundle the entire game into a single HTML file for easy distribution.
+- **Styling**: [Tailwind CSS v4](https://tailwindcss.com/) for utility-first styling.
+- **Styling Utilities**: `clsx` and `tailwind-merge` for conditionally merging tailwind classes without conflicts.
+- **Language**: TypeScript for static type checking.
+- **Networking**: [PeerJS](https://peerjs.com/) for WebRTC peer-to-peer multiplayer connectivity.
+- **Typography**: Specialized fonts including [Bungee](https://fontsource.org/fonts/bungee), [Noto Sans Malayalam](https://fontsource.org/fonts/noto-sans-malayalam), and [Rajdhani](https://fontsource.org/fonts/rajdhani) loaded via `@fontsource`.
+
+## Project Structure
+
+```text
+├── src/
+│   ├── components/  # React components for the UI
+│   ├── game/        # Core game logic, physics, and rendering
+│   ├── utils/       # Utility functions and helpers
+│   ├── App.tsx      # Main application component
+│   ├── main.tsx     # Application entry point
+│   └── index.css    # Global styles and Tailwind configuration
+├── package.json     # Project dependencies and scripts
+└── vite.config.ts   # Vite configuration including single-file plugin
+```
 
 ## Getting Started
 
